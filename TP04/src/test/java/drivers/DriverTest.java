@@ -56,11 +56,8 @@ public class DriverTest {
 //			driver.removeApp(packageName);
 //			System.out.println(driver.isAppInstalled(packageName));
 			
-			ScreenOrientation screen = driver.getOrientation();
-			driver.rotate(screen.LANDSCAPE);
-			
-			String c = driver.getContext();
-			Set<String> ch = driver.getContextHandles();
+//			ScreenOrientation screen = driver.getOrientation();
+//			driver.rotate(screen.LANDSCAPE);
 			
 //			driver.setClipboardText("Welcome to Appium");
 //			System.out.println(driver.getClipboardText());
