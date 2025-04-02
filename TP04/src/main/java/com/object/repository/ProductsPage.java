@@ -12,20 +12,20 @@ public class ProductsPage {
 	
 	public ProductsPage(AndroidDriver driver) {
 		this.driver=driver;
-		PageFactory.initElements(driver,this);
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		 
 	}
 	
-	@FindBy(id = "com.androidsample.generalstore:id/appbar_btn_cart")
+	@AndroidFindBy(id = "com.androidsample.generalstore:id/appbar_btn_cart")
 	private WebElement cartBtn;
 	
-	@FindBy(id = "com.androidsample.generalstore:id/appbar_btn_back")
+	@AndroidFindBy(id = "com.androidsample.generalstore:id/appbar_btn_back")
 	private WebElement backBtn;
 	
-	@FindBy(xpath = "//android.widget.TextView[@text='Air Jordan 4 Retro']/..//android.widget.TextView[@text='ADD TO CART']")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Air Jordan 4 Retro']/..//android.widget.TextView[@text='ADD TO CART']")
 	private WebElement shoe1;
 	
-	@FindBy(xpath = "//android.widget.TextView[@text='Air Jordan 1 Mid SE']/..//android.widget.TextView[@text='ADD TO CART']")
+	@AndroidFindBy(xpath = "//android.widget.TextView[@text='Air Jordan 1 Mid SE']/..//android.widget.TextView[@text='ADD TO CART']")
 	private WebElement shoe2;
 
 	public WebElement getCartBtn() {
