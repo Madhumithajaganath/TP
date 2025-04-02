@@ -16,22 +16,22 @@ public class LoginPage {
 	
 	public LoginPage(AndroidDriver driver) {
 		this.driver=driver;
-		PageFactory.initElements( driver, this );
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-	@FindBy(id = "com.androidsample.generalstore:id/spinnerCountry")
+	@AndroidFindBy(id = "com.androidsample.generalstore:id/spinnerCountry")
 	private WebElement countryDropDown;
 
-	@FindBy(id = "com.androidsample.generalstore:id/nameField")
+	@AndroidFindBy(id = "com.androidsample.generalstore:id/nameField")
 	private WebElement NameTextField;
 	
-	@FindBy(id = "com.androidsample.generalstore:id/radioMale")
+	@AndroidFindBy(id = "com.androidsample.generalstore:id/radioMale")
 	private WebElement radioBtnMale;
 	
-	@FindBy(id = "com.androidsample.generalstore:id/radioFemale")
+	@AndroidFindBy(id = "com.androidsample.generalstore:id/radioFemale")
 	private WebElement radioBtnFemale;
 
-	@FindBy(id = "com.androidsample.generalstore:id/btnLetsShop")
+	@AndroidFindBy(id = "com.androidsample.generalstore:id/btnLetsShop")
 	private WebElement letsShopBtn;
 	
 	public WebElement getCountryDropDown() {
