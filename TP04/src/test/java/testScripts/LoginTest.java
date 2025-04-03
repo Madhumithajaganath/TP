@@ -18,7 +18,6 @@ public class LoginTest extends BaseClass {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(lp.getCountryDropDown()));
 		lp.loginByAllFields(gUtils, "India", "abcd");
-		fggj
 	}
 	
 	@Test
